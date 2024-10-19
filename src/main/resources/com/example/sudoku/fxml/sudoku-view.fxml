@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="591.0" style="-fx-background-color: #ffe5e5;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sudoku.controller.GameController">
+   <children>
+      <ImageView fitHeight="65.0" fitWidth="71.0" layoutX="279.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/montana-fuji.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="176.0" fitWidth="156.0" layoutX="443.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/sakura-right.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="170.0" fitWidth="191.0" layoutX="-6.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/sakura-left.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="585.0" fitWidth="511.0" layoutX="40.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/tori.png" />
+         </image>
+      </ImageView>
+      <GridPane fx:id="grid" gridLinesVisible="true" layoutX="139.0" layoutY="232.0" prefHeight="375.0" prefWidth="325.0" style="-fx-background-color: #eecdcd;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="grid_00" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" nodeOrientation="LEFT_TO_RIGHT" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="39.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 12.5 0 0 5;">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets left="5.0" top="5.0" />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="grid_10" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 12.5 0 0 0;" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets top="5.0" />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="grid_20" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-border-width: 12.5 5 0 0; -fx-font-size: 24; -fx-border-color: #f24e4e;" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets right="5.0" top="10.0" />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="grid_30" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 12.5 0 0 5;" GridPane.columnIndex="3">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_40" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 12.5 0 0 0;" GridPane.columnIndex="4">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="grid_50" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 12.5 5 0 0;" GridPane.columnIndex="5">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_01" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 0 0 12.5 5;" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="5.0" />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="grid_11" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 0 0 12.5 0;" styleClass="12.5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets bottom="10.0" />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="grid_21" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-border-width: 0 5 12.5 0; -fx-font-size: 24; -fx-border-color: #f24e4e;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets bottom="10.0" right="10.0" />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="grid_31" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 0 0 12.5 5;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_41" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 0 0 12.5 0;" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_51" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 0 5 12.5 0;" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_02" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 12.5 0 0 5;" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_12" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 12.5 0 0 0;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="grid_22" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 12.5 5 0 0;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_32" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 12.5 0 0 5;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_42" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 12.5 0 0 0;" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="grid_52" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 12.5 5 0 0;" GridPane.columnIndex="5" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_03" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 0 0 12.5 5;" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_13" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 0 0 12.5 0;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_23" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 0 5 12.5 0;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_33" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 0 0 12.5 5;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_43" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 0 0 12.5 0;" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_53" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 0 5 12.5 0;" GridPane.columnIndex="5" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_04" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 12.5 0 0 5;" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_14" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 12.5 0 0 0;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="grid_24" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 12.5 5 0 0;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_34" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 12.5 0 0 5;" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_44" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 12.5 0 0 0;" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="grid_54" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 12.5 5 0 0;" GridPane.columnIndex="5" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_05" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 0 0 12.5 5;" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_15" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 0 0 12.5 0;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_25" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 0 5 12.5 0;" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_35" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 0 0 12.5 5;" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_45" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" onKeyTyped="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 0 0 12.5 0;" GridPane.columnIndex="4" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="grid_55" alignment="CENTER" blendMode="OVERLAY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" onKeyReleased="#verifyNumber" prefHeight="48.0" prefWidth="52.0" scaleShape="false" style="-fx-font-size: 24; -fx-border-color: #f24e4e; -fx-border-width: 0 5 12.5 0;" GridPane.columnIndex="5" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+         </children>
+      </GridPane>
+      <Label alignment="CENTER" layoutX="154.0" layoutY="14.0" prefHeight="105.0" prefWidth="286.0" text="Sud    kU">
+         <font>
+            <Font size="72.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="200.0" fitWidth="150.0" layoutX="-6.0" layoutY="494.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/bambu.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="137.0" fitWidth="126.0" layoutX="451.0" layoutY="564.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lucky-cat.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="helpButton" layoutX="234.0" layoutY="130.0" mnemonicParsing="false" onAction="#useHelp" prefHeight="33.0" prefWidth="126.0" style="-fx-background-color: #ffffff;" text="Helps: 5">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="playButton" layoutX="233.0" layoutY="130.0" mnemonicParsing="false" onAction="#playGame" prefHeight="33.0" prefWidth="126.0" style="-fx-background-color: #ffffff;" text="Play">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
